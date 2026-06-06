@@ -1,0 +1,3 @@
+Para la syscall WaitForTick, se ha decidido crear una lista de procesos esperando un tick, a la cual se añaden los procesos que efectúan la llamada a sistema. Cada tick de reloj, se vuelven a meter en la cola de ready los procesos que estén en dicha lista.
+
+El test de user.c efectúa la llamada a sistema con el proceso padre, haciendo que el hijo siempre escriba primero por pantalla.
